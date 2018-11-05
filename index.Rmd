@@ -1,0 +1,11 @@
+% Introdução
+
+Na análise de dados, a visualização é uma etapa fundamental que permite ao pesquisador entender sobre conjunto de dados. A observação do conjunto de dados em uma tabela não é informativa e pouco se pode aprender acerca de padrões, tendências e associações entre variáveis. É “enxergando” os dados que o pesquisador vai decidir sobre a necessidade de transformar, criar novas variáveis, e definir os modelos estatísticos a serem usados para testar as hipóteses.
+
+A visualização por meio de gráficos deve ser iniciada na fase de exploração e sumarização dos dados embora, de maneira geral, se considere que os gráficos são apenas necessários na etapa de comunicação dos resultados. São dois contextos diferentes em que se usam os procedimentos gráficos.
+
+Na etapa de visualização, o gráfico deve ser feito rapidamente e de maneira simples, utilizando tipos de gráficos apropriados para responder a uma determinada pergunta. O gráfico serve apenas para dar o subsídio necessário ao pesquisador para as decisões posteriores. Não é necessário que os gráficos sejam muito elaborados, com muitos detalhes (com títulos de eixos, legendas, etc.). Eles são apenas formas rudimentares do gráfico que será apresentado em um publicação. Esses últimos sim exigirão um bom tempo do pesquisador para elaborar um bom gráfico para uma comunicação efetiva. 
+
+Neste minicurso, os dados serão visualizados no R utilizando-se o pacote ggplot2 que é considerado o “estado da arte” em visualização de dados no R ver página do ggplot2. Tradicionalmente, gráficos em R são elaboradores com funções do pacote Graphics que é nativo do R base, o qual foi desenvolvido e mantido pelo “R Core Team” e colaboradores ao redor do mundo. As funções de gráficos do R base tem uma sintaxe diferente do ggplot2 e não serão abordados nesse capítulo.
+
+

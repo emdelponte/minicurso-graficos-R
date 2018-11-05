@@ -1,0 +1,71 @@
+% Mapas
+
+
+```{r}
+library(rnaturalearth)
+library(rnaturalearthhires)
+```
+
+
+```{r}
+BRA <- ne_states(country = "Brazil",
+                 returnclass = "sf")
+
+```
+
+```{r}
+MG <- BRA[BRA$name_en == "Minas Gerais", ]
+MG
+```
+
+```{r}
+city <- "Vicosa"
+lat <- -20.7474
+lon <- -42.883
+dat <- data.frame(city, lat, lon)
+
+```
+
+```{r}
+library(ggplot2)
+vicosa <- ggplot(MG) +
+  geom_sf(fill = "white") +
+  coord_sf() +
+  geom_point(data = dat, aes(lon, lat))+
+  theme_minimal()
+
+vicosa
+
+```
+
+
+```{r}
+brasil <- ggplot(BRA) +
+  geom_sf(fill = "white") +
+   geom_sf(data = MG, fill = "green") +
+  coord_sf() +
+  geom_point(data = dat, aes(lon, lat))+
+  theme_minimal()
+```
+
+```{r}
+library(plotly)
+ggplotly(brasil)
+
+brasil
+
+```
+
+
+
+library(cowplot)
+
+plot_grid(vicosa, brasil, labels = c("A", "B"), rel_widths = c(1,1), align = c("hv"))
+
+
+
+```
+
+
+
+
