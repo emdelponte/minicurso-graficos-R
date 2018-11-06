@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1541462853265.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "355886471",
+    "id" : "A0DD6BBB",
+    "lastKnownWriteTime" : 1541462859,
+    "last_content_update" : 1541462859149,
+    "path" : "~/Documents/GitHub/minicurso-graficos-R/_site.yml",
+    "project_path" : "_site.yml",
+    "properties" : {
+        "cursorPosition" : "36,61",
+        "scrollLine" : "23"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "yaml"
+}
