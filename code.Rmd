@@ -202,6 +202,43 @@ ggsave("plots/g1.png", width = 5, height = 6, dpi = 600)
   
 ```
  
+ 
+### Múltiplos plots 
+
+
+```{r fig.height=6, fig.width=5}
+g14 <- dat1 %>%
+  filter(year == "2010") %>%
+  mutate(yield2 = yield * 0.0628) %>%
+  ggplot(aes(reorder(state, yield2), yield2, size = acres / 0.404686 / 1000000)) +
+  geom_point(color = "steelblue") +
+  coord_flip() +
+  labs(
+    y = "Produtividade (ton/ha)",
+    x = "",
+    title = "Produtividade media de milho",
+    subtitle = "Ano de 2010",
+    caption = "Fonte: NASS USDA", 
+    size = "Area plantada (ha)"
+  )+
+  theme_minimal()+
+  theme(legend.position = "bottom")
+
+g14
+```
+  
+### Painel 
+
+Pacote cowplot
+
+```{r}
+library(cowplot)
+plot_grid(g13, g14, labels = LETTERS)
+ggsave("plots/g2_combo.png", width =8, height =6)
+
+```
+
+  
   
 ### Gráfico interativo
 
